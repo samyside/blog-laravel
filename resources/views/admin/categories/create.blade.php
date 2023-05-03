@@ -42,34 +42,6 @@
           </div>
         </div>
         <!-- /.row -->
-        <!-- Categories table row -->
-        <div class="row">
-          <div class="card col-12">
-            <!-- /.card-header -->
-            <div class="card-body table-responsive p-0">
-              <table class="table table-hover text-nowrap">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Название</th>
-                    <th>Действие</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @foreach($categories as $category)
-                  <tr>
-                    <td>{{ $category->id }}</td>
-                    <td>{{ $category->title}}</td>
-                    <th><a href=""><i class="fa-regular fa-eye"></i></a></th>
-                  </tr>
-                  @endforeach
-                </tbody>
-              </table>
-            </div>
-            <!-- /.card-body -->
-          </div>
-        </div>
-        <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
