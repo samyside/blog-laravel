@@ -37,7 +37,7 @@
                   <tr>
                     <th>ID</th>
                     <th>Название</th>
-                    <th>Действие</th>
+                    <th>Просмотр</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -45,7 +45,10 @@
                   <tr>
                     <td>{{ $category->id }}</td>
                     <td>{{ $category->title}}</td>
-                    <th><a href="{{ route('admin.category.show', $category->id) }}"><i class="fa-regular fa-eye"></i></a></th>
+                    <th>
+                      <a href="{{ route('admin.category.show', $category->id) }}"><i class="fa-regular fa-eye"></i></a>
+                      <a href="{{ route('admin.category.edit', $category->id) }}"><i class="fa-solid fa-pen"></i></a>
+                    </th>
                   </tr>
                   @endforeach
                 </tbody>
