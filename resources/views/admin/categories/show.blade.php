@@ -23,31 +23,22 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-1 mb-3"><a href="{{ route('admin.category.create') }}" class="btn btn-primary">Добавить категорию</a></div>
-        </div>
         <!-- /.row -->
         <!-- Categories table row -->
         <div class="row">
-          <div class="card col-12">
+          <div class="card col-6">
             <!-- /.card-header -->
             <div class="card-body table-responsive p-0">
               <table class="table table-hover text-nowrap">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Название</th>
-                    <th>Действие</th>
-                  </tr>
-                </thead>
                 <tbody>
-                  @foreach($categories as $category)
                   <tr>
+                    <td>ID</td>
                     <td>{{ $category->id }}</td>
-                    <td>{{ $category->title}}</td>
-                    <th><a href="{{ route('admin.category.show', $category->id) }}"><i class="fa-regular fa-eye"></i></a></th>
                   </tr>
-                  @endforeach
+                  <tr>
+                    <td>Название</td>
+                    <td>{{ $category->title }}</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
