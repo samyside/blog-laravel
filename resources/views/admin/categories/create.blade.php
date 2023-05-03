@@ -25,10 +25,17 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <form class="w-25">
+            <form class="w-25" action="{{ route('admin.category.store') }}" method="POST">
+              @csrf
               <div class="form-group">
                 <label>Название категории</label>
-                <input type="text" class="form-control" placeholder="Название">
+                <input type="text" class="form-control" placeholder="Название" name="title">
+                @error('title')
+                  <div class="text-danger">
+                    <p>Это поле является обязательным.</p>
+                    <p>{{$message}}</p>
+                  </div>
+                @enderror
               </div>
               <input type="submit" class="btn btn-primary" value="Сохранить" name="">
             </form>
